@@ -12,7 +12,7 @@ function App() {
 	}, []);
 
 	return (
-		<div className="">
+		<div>
 			<div className="container mx-auto text-center py-4">
 				<h1 className="text-2xl">Islamics</h1>
 			</div>
