@@ -27,8 +27,19 @@ function App() {
 
 	return (
 		<div>
-			<div className="container mx-auto text-center py-4 space-y-2">
-				<h1 className="text-3xl font-rocknroll">Islamics</h1>
+			<div className="container mx-auto py-4 space-y-2">
+				<div className="flex items-center gap-4 justify-between">
+					<h1 className="text-3xl font-rocknroll">Islamics</h1>
+					<button
+						onClick={() => {
+							localStorage.clear();
+							window.location.reload();
+						}}
+						className="px-3 text-sm py-2 rounded-md bg-zinc-800/50 border border-zinc-700 active:bg-opacity-50 hover:bg-zinc-800 transition"
+					>
+						Refresh
+					</button>
+				</div>
 				<p>
 					Last update: {createdAt.toLocaleDateString()} {createdAt.toLocaleTimeString()}
 				</p>
