@@ -33,12 +33,7 @@ async function getAdhan(date = new Date()) {
 }
 
 export async function getTimings(rdate = new Date()) {
-    const date = new Date(rdate);
-    const { timings } = await getAdhan(date);
-    const formattedTimings = {} as Partial<Timings>;
-    Object.keys(timings).forEach((key) => {
-        const timing = timings[key];
-        formattedTimings[key as keyof Timings] = timing;
-    });
-    return formattedTimings;
+	const date = new Date(rdate);
+	const { timings } = await getAdhan(date);
+	return timings as Timings;
 }

@@ -8,6 +8,12 @@ export default defineConfig({
 		react(),
 		VitePWA({
 			registerType: "autoUpdate",
+			workbox: {
+				globPatterns: ["**/*.{js,css,html,ico,png,svg}"],
+			},
+			devOptions: {
+				enabled: true,
+			},
 			manifest: {
 				id: "islamics",
 				background_color: "#000000",
